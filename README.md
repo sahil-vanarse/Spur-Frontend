@@ -1,5 +1,7 @@
 # Spur AI Chat Agent - Frontend
 
+**Live Demo:** [https://spur-frontend-zrde.onrender.com/](https://spur-frontend-zrde.onrender.com/)
+
 Modern, responsive chat interface for the AI-powered customer support agent. Built with SvelteKit, TypeScript, and Vite.
 
 ## 🚀 Quick Start
@@ -192,33 +194,28 @@ VITE_API_URL=https://your-backend.onrender.com
 ```
 
 ### Recommended Platforms
-- **Vercel**: Zero-config SvelteKit deployment
-- **Netlify**: Easy deployment with form handling
-- **Cloudflare Pages**: Fast global CDN
-- **GitHub Pages**: Free static hosting (with adapter)
+- **Render**: Best for Node.js adapter (configured default)
+- **Vercel**: Requires creating a `vercel.json` or switching to `adapter-vercel`
+- **Netlify**: Requires `adapter-netlify`
 
-### Deployment Steps (Example: Vercel)
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run: `vercel`
-3. Follow prompts
-4. Set environment variable: `VITE_API_URL`
-5. Deploy!
-
-Or use Vercel GitHub integration:
-1. Connect repository to Vercel
-2. Set `VITE_API_URL` in environment variables
-3. Deploy automatically on push
+### Deployment Steps (Example: Render)
+1. Create new Web Service
+2. Connect GitHub repository
+3. Set build command: `npm install && npm run build`
+4. Set start command: `node build`
+5. Add environment variable: `VITE_API_URL`
+6. Deploy!
 
 ## 🔧 Configuration
 
 ### SvelteKit Adapter
-Currently using `@sveltejs/adapter-auto` which auto-detects deployment platform.
+Currently using `@sveltejs/adapter-node` for robust deployment on Render.
 
-For specific platforms:
+For other platforms, you may need to switch adapters:
 - Vercel: `@sveltejs/adapter-vercel`
 - Netlify: `@sveltejs/adapter-netlify`
 - Static: `@sveltejs/adapter-static`
-- Node: `@sveltejs/adapter-node`
+- Auto-detect: `@sveltejs/adapter-auto`
 
 ### CORS Configuration
 If you get CORS errors:
@@ -282,3 +279,6 @@ Uses Svelte's `{@html}` directive for safe rendering.
 
 
 
+## 👤 Author
+
+### Sahil Vanarse
