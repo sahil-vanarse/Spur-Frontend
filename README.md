@@ -1,5 +1,11 @@
 # Spur AI Chat Agent - Frontend
 
+**Video Demo: ** 
+
+https://github.com/user-attachments/assets/6e994310-de8f-4503-bd2b-acd5bbff6efa
+
+
+
 **Live Demo:** [https://spur-frontend-zrde.onrender.com/](https://spur-frontend-zrde.onrender.com/)
 
 Modern, responsive chat interface for the AI-powered customer support agent. Built with SvelteKit, TypeScript, and Vite.
