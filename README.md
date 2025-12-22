@@ -1,5 +1,7 @@
 # Spur AI Chat Agent - Frontend
 
+**Backend Repository Link:** [https://github.com/sahil-vanarse/Spur-Backend](https://github.com/sahil-vanarse/Spur-Backend)
+
 **Video Demo:**
 
 https://github.com/user-attachments/assets/6e994310-de8f-4503-bd2b-acd5bbff6efa
