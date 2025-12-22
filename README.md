@@ -1,6 +1,6 @@
 # Spur AI Chat Agent - Frontend
 
-**Video Demo: ** 
+**Video Demo:**
 
 https://github.com/user-attachments/assets/6e994310-de8f-4503-bd2b-acd5bbff6efa
 
