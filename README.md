@@ -16,7 +16,6 @@ Modern, responsive chat interface for the AI-powered customer support agent. Bui
 
 ### Prerequisites
 - Node.js 18+ and npm
-- Backend server running (see `../backend/README.md`)
 
 ### Installation
 
