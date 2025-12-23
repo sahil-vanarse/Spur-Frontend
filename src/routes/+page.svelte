@@ -31,13 +31,27 @@
   ];
 
   onMount(async () => {
+    // Safety timeout: stop spinner after 5 seconds max
+    const timeout = setTimeout(() => {
+        if (isInitializing) {
+            console.warn('Initialization timed out');
+            isInitializing = false;
+        }
+    }, 5000);
+
     try {
+      console.log('Initializing Chat...');
       sessionId = localStorage.getItem('chat_session_id') || undefined;
       selectedProvider = (localStorage.getItem('llm_provider') as LLMProvider) || 'groq';
       
       if (sessionId) {
+        console.log('Found sessionId:', sessionId);
         try {
+          // Race between fetch and a shorter inner timeout (e.g. 3s)
+          // But effectively the outer finally will handle it.
           const history = await getHistory(sessionId);
+          console.log('History loaded', history);
+          
           if (history.messages.length > 0) {
             messages = history.messages;
             view = 'chat'; 
@@ -45,13 +59,20 @@
           }
         } catch (e) {
           console.error('Failed to load history:', e);
+          // If history fails (e.g. invalid session on new backend), clear it
           localStorage.removeItem('chat_session_id');
           sessionId = undefined;
         }
+      } else {
+        console.log('No existing session');
       }
+    } catch (err) {
+      console.error('Critical initialization error:', err);
     } finally {
       // Done initializing
+      clearTimeout(timeout);
       isInitializing = false;
+      console.log('Initialization complete');
     }
   });
 
