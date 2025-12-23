@@ -102,7 +102,7 @@
     view = 'home';
   }
 
-  function handleReset() {
+  function handleNewChat() {
     messages = [];
     sessionId = undefined;
     localStorage.removeItem('chat_session_id');
