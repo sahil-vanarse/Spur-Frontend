@@ -4,9 +4,7 @@
 
 **Video Demo:**
 
-https://github.com/user-attachments/assets/6e994310-de8f-4503-bd2b-acd5bbff6efa
-
-
+https://github.com/user-attachments/assets/e517249d-f6d7-4b2e-8925-6e6ac32c6293
 
 **Live Demo:** [https://spur-frontend-zrde.onrender.com/](https://spur-frontend-zrde.onrender.com/)
 
